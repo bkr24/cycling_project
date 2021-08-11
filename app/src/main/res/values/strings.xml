@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cycling Project</string>
+    <string name="apiKEY">AIzaSyDHbvk4cS7ou3qox4r4PKxYiaUns2XX6t4</string>
+    <string name="weatherAPI">993052e25d054681e718e9a94ccedb79</string>
+    <string name="title_activity_route_maps">Map</string>
+    <string name="title_activity_view_weather">ViewWeather</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

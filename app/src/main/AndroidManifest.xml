@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="aston.rogalskb.cyclingproject_v3">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".socialComponents.chatList" />
+        <activity
+            android:name=".socialComponents.chatActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".socialComponents.viewUsers" />
+        <activity android:name=".socialComponents.viewPosts" />
+        <activity android:name=".socialComponents.addPostActivity" />
+        <activity android:name=".socialComponents.login" />
+        <activity android:name=".socialComponents.profileActivity" />
+        <activity android:name=".socialComponents.registration" />
+        <activity android:name=".socialComponents.loginPage" />
+        <activity
+            android:name=".updateRoute"
+            android:parentActivityName=".savedRoutes" />
+        <activity
+            android:name=".saveNewRoute"
+            android:label="Save Route"
+            android:parentActivityName=".drawMapRoute" />
+        <activity android:name=".savedRoutes" />
+        <activity android:name=".drawMapRoute" />
+        <activity
+            android:name=".end_location"
+            android:launchMode="standard" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="standard"
+            android:noHistory="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".start_location"
+            android:launchMode="standard" />
+        <activity android:name=".ViewWeather" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/apiKEY" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".planRouteActivity"
+            android:launchMode="standard"
+            android:noHistory="false" />
+
+        <receiver android:name=".dateTimePicker.reminderBroadcast" />
+    </application>
+
+</manifest>

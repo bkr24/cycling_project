@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="aston.rogalskb.cyclingproject_v3.socialComponents.profileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/profileCoverImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/quantum_cyanA400">
+
+            </ImageView>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="140dp">
+
+                    <ImageView
+                        android:id="@+id/profilePicture"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_add_image"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/profileNameTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Name"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="20dp"
+                            android:textColor="@color/quantum_deeppurple"/>
+
+                        <TextView
+                            android:id="@+id/profileEmailTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Email"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/quantum_deeppurple"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/profileFAB"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_margin="40dp"
+    android:src="@drawable/ic_menu_black_24dp">
+
+
+
+
+</com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+
+
+</RelativeLayout>

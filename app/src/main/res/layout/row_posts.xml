@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="@color/quantum_vanillablue100"
+    app:contentPadding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+            <ImageView
+                android:id="@+id/postProfilePicture"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_add_image"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/postUserNameView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="21sp"
+                    android:textColor="@color/quantum_black_100"
+                    android:text="Username"/>
+
+                <TextView
+                    android:id="@+id/postPostTimeView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/quantum_black_100"
+                    android:text="30 minutes"/>
+
+
+                <TextView
+                    android:id="@+id/postEmailView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="190dp"
+                    android:layout_marginLeft="190dp"
+                    android:text="Email address"
+                    android:textColor="@color/quantum_black_100" />
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/postPostTitleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2sp"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:textColor="@color/quantum_black_100"
+            android:text="Title"/>
+
+        <TextView
+            android:id="@+id/postDescriptionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/quantum_black_100"
+            android:text="Description of the post that was amde :)"/>
+
+        <ImageView
+            android:id="@+id/postImageView"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/quantum_googblue50"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aston.rogalskb.cyclingproject_v3.socialComponents.addPostActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/addPostTitleET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Post Title"
+            android:singleLine="true"
+            android:padding="8dp"/>
+
+        <ImageView
+            android:id="@+id/addPostImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="250dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_add_image"
+            />
+
+        <EditText
+            android:id="@+id/addPostMessageET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Post description"
+            android:padding="8dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="150dp"
+            android:gravity="start"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Post"
+            android:layout_gravity="end"
+            android:id="@+id/addPostPublishBTN"/>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

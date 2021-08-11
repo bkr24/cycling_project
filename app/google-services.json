@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "293734948339",
+    "firebase_url": "https://pro-variety-307018-default-rtdb.firebaseio.com",
+    "project_id": "pro-variety-307018",
+    "storage_bucket": "pro-variety-307018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293734948339:android:0a7ba890858e641d9e8686",
+        "android_client_info": {
+          "package_name": "aston.rogalskb.cyclingproject_v3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293734948339-jdjed306vmtoeu1d5urdo2k4cfvmfp8m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "aston.rogalskb.cyclingproject_v3",
+            "certificate_hash": "24276e26f35213ba139f7604d55c74e3bc8b0579"
+          }
+        },
+        {
+          "client_id": "293734948339-mce0giplhbcp8i0ea7u1osvj48cqqar7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFczqHn2w_WUa6QPVUgPLQgB2sbqVFvZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293734948339-mce0giplhbcp8i0ea7u1osvj48cqqar7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
