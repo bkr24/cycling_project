@@ -2,14 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/logout_action"
+    <item android:id="@+id/menuHome"
+        android:title="Home"/>
+
+    <item android:id="@+id/menuSavedRoutes"
+        android:title="Saved routes"/>
+
+
+    <item android:id="@+id/menuMessaging"
+        android:title="Chat"/>
+
+    <item android:id="@+id/menuPosts"
+        android:title="View posts"/>
+
+    <item android:id="@+id/menuLogout"
         android:title="Logout"/>
 
-    <item android:id="@+id/search_action"
-        android:title="Search"
-        android:icon="@drawable/ic_search_icon"
-        app:showAsAction="always"
-        android:actionViewClass="androidx.appcompat.widget.SearchView"
-        />
+
+
 
 </menu>

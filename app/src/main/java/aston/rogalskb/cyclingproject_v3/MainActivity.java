@@ -1,5 +1,6 @@
 package aston.rogalskb.cyclingproject_v3;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -15,6 +16,8 @@ import aston.rogalskb.cyclingproject_v3.socialComponents.viewUsers;
 import android.os.Bundle;
 
 import android.content.Intent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -136,6 +139,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //Add menu navigation
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.side_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+
+    }
+
+    //When menu is clicked
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int itemID = item.getItemId();
+        switch (itemID){
+            case R.id.menuHome:
+                Intent i = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(i);
+                return true;
+            case R.id.menuSavedRoutes:
+                Intent i1 = new Intent(MainActivity.this, aston.rogalskb.cyclingproject_v3.savedRoutes.class);
+                startActivity(i1);
+                return true;
+            case R.id.menuMessaging:
+                Intent i2 = new Intent(MainActivity.this, viewUsers.class);
+                startActivity(i2);
+                return true;
+            case R.id.menuPosts:
+                Intent i3 = new Intent(MainActivity.this, aston.rogalskb.cyclingproject_v3.socialComponents.viewPosts.class);
+                startActivity(i3);
+                return true;
+            case R.id.menuLogout:
+                firebaseAuth.signOut();
+                checkUserStatus();
+                return true;
+            default:
+                throw new IllegalStateException("Unexpected value: " + itemID);
+        }
+    }
 }
 

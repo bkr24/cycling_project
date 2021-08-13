@@ -1,11 +1,14 @@
 package aston.rogalskb.cyclingproject_v3;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -21,10 +24,13 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 import aston.rogalskb.cyclingproject_v3.R;
 import aston.rogalskb.cyclingproject_v3.mapfragmenthelp.fetchURL;
 import aston.rogalskb.cyclingproject_v3.mapfragmenthelp.taskLoadedCB;
+import aston.rogalskb.cyclingproject_v3.socialComponents.viewPosts;
+import aston.rogalskb.cyclingproject_v3.socialComponents.viewUsers;
 
 public class drawMapRoute extends AppCompatActivity implements OnMapReadyCallback, taskLoadedCB {
     GoogleMap map;
@@ -192,6 +198,50 @@ public class drawMapRoute extends AppCompatActivity implements OnMapReadyCallbac
         timeText.setText(timeDistanceObject.getTime());
         distanceText.setText(timeDistanceObject.getDistance());
 
+    }
+
+
+    //Add menu navigation
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.side_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+
+    }
+
+    //When menu is clicked
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int itemID = item.getItemId();
+        switch (itemID){
+            case R.id.menuHome:
+                Intent i = new Intent(drawMapRoute.this, MainActivity.class);
+                startActivity(i);
+                return true;
+            case R.id.menuSavedRoutes:
+                Intent i1 = new Intent(drawMapRoute.this, aston.rogalskb.cyclingproject_v3.savedRoutes.class);
+                startActivity(i1);
+                return true;
+            case R.id.menuMessaging:
+                Intent i2 = new Intent(drawMapRoute.this, viewUsers.class);
+                startActivity(i2);
+                return true;
+            case R.id.menuPosts:
+                Intent i3 = new Intent(drawMapRoute.this, aston.rogalskb.cyclingproject_v3.socialComponents.viewPosts.class);
+                startActivity(i3);
+                return true;
+            case R.id.menuLogout:
+                FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+                firebaseAuth.signOut();
+                Intent i4 = new Intent(drawMapRoute.this, aston.rogalskb.cyclingproject_v3.socialComponents.loginPage.class);
+                startActivity(i4);
+                return true;
+            default:
+                throw new IllegalStateException("Unexpected value: " + itemID);
+        }
     }
 
 

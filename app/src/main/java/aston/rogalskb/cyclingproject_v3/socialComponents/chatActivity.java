@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -357,6 +359,50 @@ public class chatActivity extends AppCompatActivity {
         //Update online status value for the current user
         databaseReference.updateChildren(hashMap);
 
+    }
+
+
+    //Add menu navigation
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.side_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+
+    }
+
+    //When menu is clicked
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int itemID = item.getItemId();
+        switch (itemID){
+            case R.id.menuHome:
+                Intent i = new Intent(chatActivity.this, MainActivity.class);
+                startActivity(i);
+                return true;
+            case R.id.menuSavedRoutes:
+                Intent i1 = new Intent(chatActivity.this, aston.rogalskb.cyclingproject_v3.savedRoutes.class);
+                startActivity(i1);
+                return true;
+            case R.id.menuMessaging:
+                Intent i2 = new Intent(chatActivity.this, viewUsers.class);
+                startActivity(i2);
+                return true;
+            case R.id.menuPosts:
+                Intent i3 = new Intent(chatActivity.this, aston.rogalskb.cyclingproject_v3.socialComponents.viewPosts.class);
+                startActivity(i3);
+                return true;
+            case R.id.menuLogout:
+                FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+                firebaseAuth.signOut();
+                Intent i4 = new Intent(chatActivity.this, aston.rogalskb.cyclingproject_v3.socialComponents.loginPage.class);
+                startActivity(i4);
+                return true;
+            default:
+                throw new IllegalStateException("Unexpected value: " + itemID);
+        }
     }
 
 
